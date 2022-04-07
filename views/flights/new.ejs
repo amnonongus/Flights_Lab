@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/flights/new">Add Flight</a>
+        <a href="/flights">All Flights</a>
+    
+    </nav> 
+     -->
+
+     <%- include('../partials/header') %>
+
+    <form action="/flights/new" method="POST">
+        <label>Airline:</label>
+        <select name ='airline'>
+            <option value="America">America</option>
+            <option value="Delta">Delta</option>
+            <option value="Southwest">Southwest</option>
+            <option valuie="United">United</option>
+        </select>
+        <label>airport</label>
+        <select name="airport">
+            <option value="ATL">ATL</option>
+            <option value="DFW">DFW</option>
+            <option value="DEN">DEN</option>
+            <option value="LAX">LAX</option>
+            <option value="SAN">SAN</option>
+        </select>
+        <label>Flight#:</label>
+        <input type="number" name="flightNo">
+        <input type="datetime-local" name="departs">
+        <input type="submit" value="New flight">
+        
+        
+        
+        
+
+    <%- include('../partials/footer') %>

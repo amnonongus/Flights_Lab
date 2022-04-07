@@ -1,0 +1,30 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <nav>
+        <a href="/flights/new">Add Flight</a>
+        <a href="/flights">All Flights</a>
+    
+       </nav>  
+    
+    <p>Flying iz fun v good to do if want go fast mayb you fly tody?</p><table id="list">
+
+     -->
+<%- include('../partials/header') %>
+
+<tbody>
+   <% flights.forEach(function(flight) { %>
+    <tr>
+        <td><h3>Flight#:</h3><%= flight.flightNo %></td>
+       <td><a href="/flights/<%= flight._id %>">DETAILS</a></td>
+
+    </tr>
+    <% }); %>
+ </tbody>
+ </table>
+
+<%- include('../partials/footer') %>
