@@ -37,18 +37,13 @@ function create(req, res) {
 
 
 async function show(req, res) {
-    console.log(req.params.id)
     const flight = await Flight.findById(req.params.id)
-     .populate('destinations')
-        console.log(flight)
+     console.log(flight)
         res.render('flights/show', {
             flight: flight,
             title: "Flight Details"
         })
 }
-
-
-
 
 
 

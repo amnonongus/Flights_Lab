@@ -39,9 +39,8 @@ const flightsSchema = new Schema({
         }
     },
 
-    destinations: {
-         type: [destinationSchema]
-    }
+    destinations: [destinationSchema]
+    
 
 });
 
